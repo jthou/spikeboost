@@ -2,10 +2,6 @@
 #include <iostream>
 #include <chrono>
 
-std::unique_ptr<SpsUsb> SpsUsb::create() {
-  return std::make_unique<SpsUsb::Impl>();
-}
-
 bool SpsUsb::Impl::initialize() {
   std::cout << "[Device]Initializing" << std::endl;
   m_keepGoing = false;
